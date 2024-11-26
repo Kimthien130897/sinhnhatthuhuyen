@@ -1,49 +1,93 @@
-body {
-  font-family: 'Arial', sans-serif;
+/* Reset CSS */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-  overflow: hidden;
 }
 
-.container {
+.card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cover, .inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  transition: transform 1s;
+}
+
+.cover {
+  background: linear-gradient(to bottom, #ffd1ff, #ffa6a6);
   color: #fff;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+.cover h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-.message {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-button {
+.cover p {
   font-size: 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.inner {
+  background: #fff5ee;
+  color: #ff6f61;
+  transform: rotateY(180deg);
+}
+
+.inner h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.inner p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.inner button {
+  background-color: #ff6f61;
+  color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background: #ff6f61;
-  color: white;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-button:hover {
-  background: #ff4b47;
+.inner button:hover {
+  background-color: #ff4b47;
 }
 
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+.card.open .cover {
+  transform: rotateY(180deg);
+}
+
+.card.open .inner {
+  transform: rotateY(0);
 }
