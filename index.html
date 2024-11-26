@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Happy Birthday, Love! 🎉</h1>
+    <p class="message">Chúc em một ngày sinh nhật thật nhiều niềm vui, hạnh phúc, và yêu thương. 💖</p>
+    <button id="playSong">Play Birthday Song</button>
+    <canvas id="confetti"></canvas>
+  </div>
+  <audio id="birthdaySong" src="happy-birthday-song.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
+CSS (styles.css)
+css
+Sao chép mã
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #ff6f61;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff4b47;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
