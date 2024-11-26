@@ -3,15 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday!</title>
+  <title>Happy Birthday Card</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>🎉 Happy Birthday, Love! 🎉</h1>
-    <p class="message">Chúc em một ngày sinh nhật thật nhiều niềm vui, hạnh phúc, và yêu thương. 💖</p>
-    <button id="playSong">Play Birthday Song</button>
-    <canvas id="confetti"></canvas>
+  <div class="card">
+    <div class="cover">
+      <h1>🎉 Happy Birthday 🎉</h1>
+      <p>Click to open</p>
+    </div>
+    <div class="inner">
+      <h1>🎂 Happy Birthday! 🎂</h1>
+      <p>
+        Chúc bạn ngày sinh nhật thật ý nghĩa, tràn đầy niềm vui và hạnh phúc! 🌟<br>
+        Bạn là người tuyệt vời nhất mà mình từng gặp! ❤️
+      </p>
+      <button id="playSong">🎶 Nghe nhạc 🎶</button>
+    </div>
   </div>
   <audio id="birthdaySong" src="happy-birthday-song.mp3"></audio>
   <script src="script.js"></script>
